@@ -1,4 +1,4 @@
-class quikdom {
+class DOM {
     constructor(selector) {
         this.selector = document.querySelectorAll(selector);
     }
@@ -81,4 +81,4 @@ class quikdom {
     }
 }
 
-export const Renderer = (selector) => new quikdom(selector);
+export const Renderer = (selector) => new DOM(selector);
