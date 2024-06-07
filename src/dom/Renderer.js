@@ -28,6 +28,33 @@ class DOM {
         return this;
     }
 
+    contentg(index = 'all') {
+        if (index === 'all') {
+            let nodes = [];
+            this.selector.forEach(item => {
+                nodes.push(item.innerHTML)
+            })
+            return nodes;
+        } else if (this.selector.length >= index > 0) {
+            return this.selector[index - 1].innerHTML
+        } else {
+            console.error('Renderer Error: Undefined value in contentg method');
+            return Error.call('Renderer Error ', 'Undefined value in contentg method')
+        }
+    }
+
+    empty(index = 'all') {
+        if (index === 'all') {
+            this.selector.forEach(item => {
+                item.innerHTML = '';
+            })
+        } else if (this.selector.length >= index > 0) {
+            this.selector[index - 1].innerHTML = '';
+        } else {
+            console.error('Renderer Error: Undefined value in empty method');
+        }
+    }
+
     // Styles Manipulation
     style(styles) {
         this.selector.forEach(item => {
@@ -78,6 +105,63 @@ class DOM {
         })
 
         return this;
+    }
+
+    // Event Handling
+    click(index = 'all', fn) {
+        if (index === 'all') {
+            this.selector.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    fn(e);
+                })
+            })
+        } else if (this.selector.length >= index > 0) {
+            this.selector[index - 1].addEventListener('click', (e) => {
+                fn(e);
+            })
+        } else {
+            console.error('Renderer Error: Undefined value in click method');
+        }
+    }
+
+    submit(index = 'all', fn) {
+        if (index === 'all') {
+            this.selector.forEach(item => {
+                item.addEventListener('submit', (e) => {
+                    fn(e);
+                })
+            })
+        } else if (this.selector.length >= index > 0) {
+            this.selector[index - 1].addEventListener('submit', (e) => {
+                fn(e);
+            })
+        } else {
+            console.error('Renderer Error: Undefined value in submit method');
+        }
+    }
+    
+    load(index = 'all', fn) {
+        if (index === 'all') {
+            this.selector.forEach(item => {
+                item.addEventListener('load', (e) => {
+                    fn(e);
+                })
+            })
+        } else if (this.selector.length >= index > 0) {
+            this.selector[index - 1].addEventListener('load', (e) => {
+                fn(e);
+            })
+        } else {
+            console.error('Renderer Error: Undefined value in load method');
+        }
+    }
+
+    // Will work on this later
+    removeEvent(index = 'all', fn) {
+        if(index === 'all') {
+            this.selector.forEach(item => {
+            })
+        }
     }
 }
 

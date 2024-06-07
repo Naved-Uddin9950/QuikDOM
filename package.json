@@ -1,6 +1,6 @@
 {
   "name": "rapid-dom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This JavaScript library let's you manipulate DOM the easiest way. It's syntax is a little like JQuery and it is easy to learn for beginner programmers. You can manipulate DOM in one line using this library",
   "main": "index.js",
   "type": "module",

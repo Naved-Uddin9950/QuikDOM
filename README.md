@@ -40,6 +40,24 @@ $('h1').remove()
 $('h1').content('Hello World!');
 ```
 
+- Get Content : ```contentg``` method is used for getting innerHTML of the selected element. In this method parameter is optional.
+```javascript
+let content_one = $('p').contentg(2); // Ouptut : Hello World! -> Value of 2nd <p> tag
+
+let content_all = $('p').contentg('all'); // Output : ["Hello World!", "Content 2", "Some other content"]
+
+let content_default = $('p').contentg(); // Output : Same as content_all type
+```
+
+- Empty Content : This method let's us empty the contents inside of selected element
+
+```javascript
+$('p').empty() // Empties all the <p> tags
+
+$('p').empty(2) // Empties second <p> tag and all the other remains same
+
+```
+
 ### Styles Manipulation
 
 - Adding styles : Adding multiples styles like text color red, background color green and padding from all sides 10px on the ```<h1>``` element
@@ -82,6 +100,48 @@ console.log(val) // Output : https:www.google.com
 ```javascript
 $('img').removeAt('alt')
 ```
+
+### Event Handling
+
+- Click Event : Takes 2 parameters, first one is place number of the element (if set to 'all' then apply event to all the selected elements), and the second is callback function
+```javascript
+// Adds event listener to all the buttons
+$('button').click('all', () => {
+    console.log('Hello World!')
+})
+
+// Adds the event listener to 3rd button only
+$('button').click(3, () => {
+    console.log('Hello World!')
+})
+```
+
+- Submit Event : Takes 2 parameters, first one is place number of the element (if set to 'all' then apply event to all the selected elements), and the second is callback function
+```javascript
+// Adds event listener to all the buttons
+$('button').submit('all', () => {
+    console.log('Form Submitted successfully')
+})
+
+// Adds the event listener to 3rd button only
+$('button').submit(3, () => {
+    console.log('Form Submitted successfully!')
+})
+```
+
+- Load Event : Takes 2 parameters, first one is place number of the element (if set to 'all' then apply event to all the selected elements), and the second is callback function
+```javascript
+// Adds event listener to all the buttons
+$('button').load('all', () => {
+    console.log('Page loaded')
+})
+
+// Adds the event listener to 3rd button only
+$('button').load(3, () => {
+    console.log('Page loaded')
+})
+```
+
 
 ### Syntax
 
