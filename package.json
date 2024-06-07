@@ -1,0 +1,38 @@
+{
+  "name": "quik-dom",
+  "version": "1.0.0",
+  "description": "This JavaScript library let's you manipulate DOM the easiest way. It's syntax is a little like JQuery and it is easy to learn for beginner programmers. You can manipulate DOM in one line using this library",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "javascript",
+    "library",
+    "javascript",
+    "library",
+    "quikdom",
+    "quik-dom",
+    "quik",
+    "dom",
+    "quik",
+    "dom",
+    "library",
+    "quik",
+    "dom",
+    "js",
+    "frontend",
+    "frontend",
+    "library"
+  ],
+  "author": "Naved Uddin",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
